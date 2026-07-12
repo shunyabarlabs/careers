@@ -251,7 +251,76 @@
   }
   .record-foot a{color:var(--ink)}
 
-  /* ============ SITUATIONS VACANT ============ */
+  /* ============ PERKS COMPARISON ============ */
+  .perks{
+    margin:34px 0;
+    border-top:3px double var(--rule);
+    border-bottom:3px double var(--rule);
+  }
+  .perks-hed{
+    font-family:'Oswald',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.2em;
+    text-transform:uppercase;text-align:center;
+    padding:10px 0;
+    border-bottom:1px solid var(--rule);
+    background:var(--paper-dark);
+  }
+  table.perks-tbl{
+    width:100%;border-collapse:collapse;font-size:.92rem;
+  }
+  table.perks-tbl thead th{
+    font-family:'Oswald',sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:14px 16px;border-bottom:2px solid var(--rule);
+    text-align:left;
+  }
+  table.perks-tbl thead th.us{color:var(--red)}
+  table.perks-tbl td{
+    padding:12px 16px;border-bottom:1px dotted var(--faint);
+    vertical-align:top;
+  }
+  table.perks-tbl tr:last-child td{border-bottom:none}
+  table.perks-tbl td.lbl{
+    font-family:'Oswald',sans-serif;font-weight:500;font-size:.7rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--faint);width:18%;
+  }
+  table.perks-tbl td.them{color:var(--ink-soft);width:41%}
+  table.perks-tbl td.us{font-weight:600;width:41%}
+  table.perks-tbl td.us b{color:var(--red);font-weight:700}
+  @media(max-width:600px){
+    table.perks-tbl td.lbl{font-size:.66rem;letter-spacing:.12em}
+    table.perks-tbl td{padding:10px 10px;font-size:.86rem}
+    table.perks-tbl thead th{padding:10px 10px;font-size:.66rem;letter-spacing:.1em}
+  }
+
+  /* ============ CO-FOUNDER TRACK ============ */
+  .founder-track{
+    margin:34px 0 0;
+    border:2px solid var(--rule);
+    background:var(--paper-dark);
+    padding:22px 26px 24px;
+    position:relative;
+  }
+  .founder-track::before{
+    content:"§";position:absolute;top:-18px;left:24px;
+    background:var(--paper);color:var(--red);
+    font-family:'Playfair Display',serif;font-weight:900;font-size:1.6rem;
+    padding:0 8px;line-height:1;
+  }
+  .founder-track-hed{
+    font-family:'Oswald',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--red);margin-bottom:12px;
+  }
+  .founder-track p{font-size:.95rem;margin-bottom:10px;line-height:1.55}
+  .founder-track p:last-child{margin-bottom:0;font-style:italic;color:var(--ink-soft);font-size:.88rem}
+  .founder-track strong{color:var(--ink)}
+  .founder-track .seal{
+    display:inline-block;font-family:'Oswald',sans-serif;font-weight:600;font-size:.66rem;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--ink);
+    border:1.5px solid var(--rule);border-radius:3px;padding:3px 8px;margin-left:6px;
+    transform:rotate(-2deg);vertical-align:1px;background:var(--paper);
+  }
+
+/* ============ SITUATIONS VACANT ============ */
   .section-hed{
     text-align:center;margin:44px 0 0;
     border-top:2px solid var(--rule);
@@ -417,6 +486,10 @@
     .pull{break-inside:avoid}
     .earline,.dateline,.colophon{color:#000}
     .resources{background:#fff}
+    .perks,.perks-tbl{break-inside:avoid;page-break-inside:avoid}
+    .perks-hed{background:#fff}
+    .founder-track{break-inside:avoid;page-break-inside:avoid;background:#fff}
+    .founder-track::before{background:#fff}
   }
 </style>
 
@@ -636,6 +709,35 @@
   </div>
 
   <p class="record-foot reveal">Editor's note: the runs above are self-reported by the lab, largely on generated instances, pending a standardized head-to-head against the field's best solvers. Building that independent comparison is, verbatim, the job description of Post No. 2 below.</p>
+
+  <!-- perks comparison -->
+  <section class="perks reveal" aria-label="Comparison of intern perks">
+    <h3 class="perks-hed">Perks · In Black And White</h3>
+    <table class="perks-tbl">
+      <thead>
+        <tr>
+          <th>Perk</th>
+          <th>Normal Intern</th>
+          <th class="us">ShunyaBar FDE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="lbl">Cash</td><td class="them">₹15–25K</td><td class="us"><b>₹38K</b></td></tr>
+        <tr><td class="lbl">Upside</td><td class="them">0.01% equity = lottery</td><td class="us"><b>20% revenue = cash</b></td></tr>
+        <tr><td class="lbl">Tools</td><td class="them">VSCode</td><td class="us"><b>Minimax + H100 SSH</b></td></tr>
+        <tr><td class="lbl">Office</td><td class="them">Your bed</td><td class="us"><b>WeWork reimbursed</b></td></tr>
+        <tr><td class="lbl">Output</td><td class="them">Jira ticket</td><td class="us"><b>Zenodo co-authorship + P&amp;L</b></td></tr>
+        <tr><td class="lbl">Access</td><td class="them">API key</td><td class="us"><b>Slack with founder debugging Lambert W at 11am</b></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- co-founder track -->
+  <section class="founder-track reveal" aria-label="Co-founder track on capital raise">
+    <h3 class="founder-track-hed">Co-Founder Track · Capital Raise Clause</h3>
+    <p>If either post <strong>materially helps ShunyaBar Labs raise capital</strong> from a <strong>Deep Tech VC in India</strong> — by closing a partner-level introduction, opening diligence, or helping convert a lead into a signed term sheet — that person is offered <strong>co-founder status</strong>. <span class="seal">Title · Equity · Cap Table Revised</span></p>
+    <p>Either post. Either person. This is a standing offer, not a one-time clause. The lab treats the person who makes the round happen as a peer, not an employee — and revises the cap table, title, and decision rights accordingly when the wire clears.</p>
+  </section>
 
   <!-- situations vacant -->
   <div class="section-hed">
