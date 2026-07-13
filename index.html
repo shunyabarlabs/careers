@@ -952,6 +952,7 @@
         <li>Run discovery calls; capture workflows, mandatory rules, and failure modes</li>
         <li>Build customer-shaped prototypes: CSV → model → solver → CSV — small enough to ship in a week, ugly enough to be honest</li>
         <li>Scope the pilot, price it, negotiate terms, close the contract</li>
+        <li>Map the customer's alternatives — spreadsheets, incumbent software, Gurobi, OR-Tools, Timefold/OptaPlanner, Nextmv, or specialist tools — and state precisely where Navokoj is and is not a fit</li>
         <li>Run Navokoj / NitroSAT with recorded commands, seeds, and outputs</li>
         <li>Sit with users while they use it; note where trust breaks; verify every result with an independent checker</li>
       </ul>
@@ -975,6 +976,7 @@
         <b>Who should not apply</b>
         Those wanting three months of pure algorithm research, those who need fully specified requirements before building, and those who optimize for GitHub stars over customer outcomes. The lab says so itself, in writing.
       </div>
+      <p class="role-rewards"><b>Strategic responsibility:</b> do not sell novelty in the abstract. Show the operator why a verified, general-purpose solver is better for this specific workflow than the incumbent or a mature domain tool.</p>
     </article>
 
     <!-- Benchmark -->
@@ -989,6 +991,7 @@
         <li>Baseline harness: Kissat, CaDiCaL, YalSAT/ProbSAT, NuWLS-c, Open-WBO, OR-Tools CP-SAT — same machine, same budgets, same semantics</li>
         <li>Ablation suite: prime weights vs uniform, spectral preconditioning off, adaptive triggers vs fixed restarts — which components earn their keep?</li>
         <li>Instance curation: SAT Competition main track, MaxSAT Evaluation incomplete track, non-planted random 3-SAT near the critical density, and a known-UNSAT calibration set</li>
+        <li>Competitive baselines: compare fairly against relevant exact, heuristic, and domain-specific systems — including Gurobi, OR-Tools/CP-SAT, Timefold/OptaPlanner, Nextmv, and specialist solvers where applicable</li>
         <li>An independent clause-by-clause verifier; no result counts until it passes</li>
         <li>Per-run artifacts: commit hash, instance hash, seeds, raw logs, verifier output</li>
       </ul>
@@ -1012,6 +1015,7 @@
         <b>Who should not apply</b>
         Those who would rather a benchmark flatter the house solver than describe it. The entire value of this post is that the numbers survive an adversarial reader.
       </div>
+      <p class="role-rewards"><b>Strategic responsibility:</b> turn the evidence bundle into a defensible product claim. No “no one else does this” language without a documented market search; no speed claim without matched budgets, baselines, and verified outputs.</p>
     </article>
 
   </div>
@@ -1031,6 +1035,7 @@
       <li><b>Scenario-based robust optimization</b> — critical shocks as hard constraints, ordinary as weighted soft clauses</li>
       <li><b>Hybrid pipeline</b> — NitroSAT for asset selection &amp; discrete constraints, QP for weight polishing</li>
       <li><b>Benchmarking</b> — reproducible vs Gurobi / CPLEX / SCIP / CVXPY / genetic / annealing / QP+heuristic</li>
+      <li><b>Product translation</b> — identify which portfolio workflows value a verified general-purpose solver over incumbent MIQP, QP, or specialist tooling</li>
     </ul>
 
     <div class="role-rewards">
@@ -1056,6 +1061,7 @@
       <li><b>NitroSAT pipeline</b> — feed the encoded instance through the solver, study weighting and penalty strategies</li>
       <li><b>Classical baselines</b> — MIP via CVXPY/Gurobi, CP-SAT via OR-Tools, plus a greedy / local-search reference</li>
       <li><b>Public benchmark suite + paper</b> — synthetic scaling curves, failure-case analysis, open-source reference implementation</li>
+      <li><b>Competitive framing</b> — document where the agricultural compiler is genuinely differentiated and where conventional MIP/CP-SAT tools remain the better choice</li>
     </ul>
 
     <div class="role-rewards">
